@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            /* font-size: 62.5%; */
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* font-weight: 300; */
+            color: #444;
+            line-height: 1.9;
+            background-color: #f3f3f3;
+        }
+
+        nav {
+            /* border: 2px solid red; */
+            padding-inline: 7%;
+            height: 15vh;
+            padding-top: 15px;
+        }
+
+        nav .logo img {
+
+            position: relative;
+            top: 5px;
+
+
+        }
+
+        nav ul {
+            display: flex;
+            float: right;
+            /* align-items: center; */
+            list-style: none;
+
+        }
+
+        nav li {
+            padding-block: 15px;
+            padding-inline: 25px;
+        }
+
+        nav a {
+            font-size: large;
+            color: black;
+            text-decoration: none;
+        }
+
+        nav .account {
+            background-color: rgba(22, 211, 154, 0.911);
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+
+        /* hero */
+        .hero {
+            font-size: large;
+            padding: 50px;
+            /* border: 2px solid black; */
+            display: flex;
+            width: 90%;
+            margin: auto;
+            /* border-bottom: 1px solid rgba(185, 185, 185, 0.562); */
+
+        }
+
+        .hero span {
+            width: 50%;
+            margin-block: 30px;
+        }
+
+        .hero span h1 {
+            font-size: 45px;
+        }
+
+        .hero h1 span {
+            background-color: rgba(22, 211, 154, 0.911);
+            padding: 15px;
+
+        }
+
+        h4 {
+            margin-block: 30px;
+
+        }
+
+        button {
+            color: rgba(22, 211, 154, 0.911);
+            border: none;
+            font-size: large;
+        }
+
+        .hero img {
+            float: right;
+            margin-inline: 50px;
+            width: 40%;
+        }
+
+        .second {
+            width: 100%;
+            /* border: 2px solid black; */
+            padding: 50px;
+
+
+        }
+
+        .featured {
+            width: 50%;
+            margin-inline: auto;
+
+        }
+
+        .second h2 {
+            font-size: 20px;
+            color: rgba(22, 211, 154, 0.911);
+        }
+
+        .second h3 {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .second .box {
+            display: flex;
+
+        }
+
+        .second .box svg {
+
+            background-color: rgba(22, 211, 154, 0.911);
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+
+        }
+
+
+
+        .second .box .span {
+            width: 50%;
+            /* margin: 200px; */
+            padding: 90px;
+
+            /* border: 2px solid black; */
+
+        }
+
+        .second .box .span h5 {
+            font-size: 18px;
+        }
+
+
+
+        .second .box .img {
+            width: 50%;
+            padding: 70px;
+            /* border: 2px solid red; */
+
+
+        }
+
+
+
+        .second .box .img img {
+            height: 100%;
+            width: 100%;
+            filter: blur(15px);
+        }
+
+        .second .box .img img:hover {
+            filter: blur(0px);
+        }
+
+
+        /* Operations */
+
+        .third {
+            width: 100%;
+            /* border: 2px solid black; */
+            padding: 50px;
+
+
+        }
+
+        .third .operation {
+            width: 60%;
+            margin-inline: auto;
+
+        }
+
+        .third .operation h2 {
+            font-size: 20px;
+            color: rgba(22, 211, 154, 0.911);
+        }
+
+        .third .operation h3 {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .third .cards {
+            width: 80%;
+            margin: auto;
+            /* border: 2px solid red; */
+            text-align: center;
+            margin-block: 80px;
+            background-color: white;
+        }
+
+        .third .cards button {
+            margin-inline: 40px;
+            position: relative;
+            top: -25px;
+            color: #444;
+
+            /* margin-inline: 35px;*/
+            padding: .7em 1em;
+            margin: .5em;
+            border-radius: 1.2em;
+
+        }
+
+        .third .cards .a_card_1 {
+            background-color: orange;
+            /* opacity: 100; */
+
+
+        }
+
+        .third .cards .a_card_2 {
+            background-color: rgba(22, 211, 154, 0.911);
+            /* opacity: 0; */
+
+        }
+
+        .third .cards .a_card_3 {
+            background-color: red;
+            /* opacity: 0; */
+        }
+
+
+        .third .cards .card_ {
+            display: flex;
+
+            margin-top: 0px;
+
+            padding: 45px;
+            /* border: 2px solid red; */
+            /* position: absolute; */
+
+        }
+
+        .third .cards .card_2 {
+            display: none;
+        }
+
+        .third .cards .card_3 {
+            display: none;
+        }
+
+        .third .cards .card_ svg {
+            background-color: rgba(22, 211, 154, 0.911);
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+            margin-inline: 30px;
+            float: left;
+        }
+
+
+        .third .cards .card_ span {
+            /* border: 2px solid red; */
+            width: 90%;
+            margin: auto;
+
+
+        }
+
+        .third .cards .card_ h5 {
+            font-size: 20px;
+            font-weight: 500;
+            text-align: left;
+            margin-block: 10px;
+        }
+
+        .third .cards .card_ p {
+            text-align: left;
+        }
+
+        /* Not Sure */
+
+        .fourth {
+            width: 100%;
+            /* border: 2px solid black; */
+            padding: 50px;
+            /* border-bottom: 1px solid grey; */
+
+
+        }
+
+        .fourth .sure {
+            width: 60%;
+            margin-inline: auto;
+
+        }
+
+        .fourth .sure h2 {
+            font-size: 20px;
+            color: rgba(22, 211, 154, 0.911);
+        }
+
+        .fourth .sure h3 {
+            font-size: 35px;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .fourth .comments {
+            display: flex;
+            width: 100%;
+            margin: auto;
+        }
+
+        .fourth .comments .comment_ {
+            display: flex;
+            width: 70%;
+            margin: auto;
+
+
+        }
+
+        .fourth .comments .comment_ .a label em {
+            /* font-size: 100px; */
+            font-size: 150px;
+            color: rgba(22, 211, 154, 0.911);
+
+        }
+
+        .fourth .comments .comment_ .b {
+            width: 70%;
+            margin: auto;
+            padding-top: 80px;
+        }
+
+        .fourth .comments .right,
+        .fourth .comments .left {
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            margin: auto 0;
+            border-radius: 50%;
+
+            padding: 10px 17px;
+
+
+
+
+        }
+
+        .fourth .address {
+            width: 40%;
+            margin: auto;
+            /* border: 2px solid red; */
+            display: flex;
+        }
+
+        .fourth .address img {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        .create_accout {
+            text-align: center;
+            width: 100%;
+            background-color: #444;
+            padding: 50px;
+
+            /* position: relative; */
+            border-bottom: 2px solid grey;
+        }
+
+        .create_accout h3 {
+            color: white;
+            font-size: 30px;
+            width: 50%;
+            margin: 50px auto;
+        }
+
+        .create_accout a {
+            background-color: rgba(22, 211, 154, 0.911);
+            color: #444;
+            font-size: 25px;
+            /* padding-block: 25px; */
+            /* padding-inline: 32px; */
+            padding: .7em 1em;
+            margin: .25em;
+            border-radius: 1.2em;
+
+        }
+
+        .page {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .Model {
+            height: auto;
+            width: 50%;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 25%;
+            flex-direction: row;
+            margin: auto;
+            padding: 50px;
+            z-index: 5;
+            display: none;
+
+
+        }
+
+
+
+        .Model h2 {
+            font-size: 38px;
+            width: 80%;
+            margin: auto;
+            line-height: normal;
+            text-align: left;
+            margin-block: 30px;
+        }
+
+        .Model h2 span {
+            background-color: rgba(22, 211, 154, 0.911);
+        }
+
+
+
+
+
+        .Model input {
+            padding: 5px 10px;
+            width: 90%;
+        }
+
+        .Model table {
+            width: 70%;
+            margin: auto;
+        }
+
+        .Model table tr th,
+        .Model table tr td {
+            padding: 10px 0;
+        }
+
+        .Model table tr td button {
+            padding: .5em 1em;
+            margin: .25em;
+            border-radius: 1.2em;
+            background-color: rgba(22, 211, 154, 0.911);
+            color: #444;
+        }
+
+        .Model table tr td label {
+
+            /* justify-content: left; */
+        }
+
+        .footer {
+            padding: 50px;
+            /* border: 2px solid red; */
+            background-color: #444;
+            color: white;
+
+        }
+
+        .footer ul {
+            width: 65%;
+            margin: auto;
+            /* border: 2px solid red; */
+            display: flex;
+            list-style: none;
+            /* padding: 10px 20px; */
+
+
+
+        }
+
+        .footer ul li {
+
+            padding: 10px 20px;
+            justify-content: space-evenly;
+        }
+
+        .footer .img {
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            margin: auto;
+        }
+
+        .footer .img img {
+            height: 50px;
+            width: 50px;
+            margin: 24px 0;
+
+
+        }
+
+        .footer p {
+            font-size: 15px;
+            color: grey;
+            width: 75%;
+            margin: auto;
+            margin-block: 25px;
+
+        }
+
+        .footer p span {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./logo.png" alt="" height="50">
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Operations</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#" class="account">Open Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <span>
+            <h1>
+                When
+
+                <span class="highlight">banking</span>
+                meets<br>
+                <span class="highlight">minimalist</span>
+            </h1>
+            <h4>A simpler banking experience for a simpler life.</h4>
+            <button>Learn more ↓</button>
+        </span>
+        <img src=" ./Bankist _ When Banking meets Minimalist_files/hero.png" alt="">
+    </div>
+
+    <div class="second">
+        <div class="featured">
+            <h2>Features</h2>
+            <h3 class="section__header">
+                Everything you need in a modern bank and more.
+            </h3>
+        </div>
+        <div class="box box1">
+            <div class="img"> <img src="./Bankist _ When Banking meets Minimalist_files/digital-lazy.jpg" alt=""></div>
+
+            <div class="span">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-trending-up"></use>
+                </svg>
+                <h5 class="features__header">100% digital bank
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias sint quos? Accusantium a fugiat
+                    porro reiciendis saepe quibusdam debitis ducimus.
+                </p>
+            </div>
+        </div>
+
+        <div class="box box2">
+            <div class="span">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-trending-up"></use>
+                </svg>
+                <h5 class="features__header">Watch your money grow</h5>
+                <p>
+                    Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+                    inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+                    quibusdam!
+                </p>
+            </div>
+            <div class="img"> <img src="./Bankist _ When Banking meets Minimalist_files/grow-lazy.jpg" alt=""></div>
+
+        </div>
+
+        <div class="box box1">
+            <div class="img"> <img src="./Bankist _ When Banking meets Minimalist_files/card-lazy.jpg" alt=""></div>
+
+            <div class="span">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-trending-up"></use>
+                </svg>
+                <h5 class="features__header">Free debit card included</h5>
+                <p>
+                    Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim eveniet consequatur odit quam
+                    quos possimus assumenda dicta fuga inventore ab.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="third">
+        <div class="operation">
+            <h2>OPERATIONS</h2>
+            <h3 class="section__header">
+                Everything as simple as possible, but no simpler. </h3>
+        </div>
+        <div class="cards">
+            <button href="#" class="a_card_1">01 Instant Transfers</button>
+            <button href="#" class="a_card_2">02 Instant Loans</button>
+            <button href="#" class="a_card_3">03 Instant Closing</button>
+
+            <div class="card_">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-upload"></use>
+                </svg>
+                <span>
+                    <h5 class="operations__header">
+                        1 Tranfser money to anyone, instantly! No fees, no BS.
+                    </h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </span>
+            </div>
+
+            <div class="card_ card_2">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-upload"></use>
+                </svg>
+                <span>
+                    <h5 class="operations__header">
+                        1 Tranfser money to anyone, instantly! No fees, no BS.
+                    </h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </span>
+            </div>
+            <div class="card_ card_3">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-upload"></use>
+                </svg>
+                <span>
+                    <h5 class="operations__header">
+                        1 Tranfser money to anyone, instantly! No fees, no BS.
+                    </h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </span>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="fourth">
+        <div class="sure">
+            <h2>NOT SURE YET?</h2>
+            <h3 class="section__header">
+                Millions of Bankists are already making their lifes simpler.
+            </h3>
+        </div>
+
+        <div class="comments">
+            <div class="left">←</div>
+            <div class="comment_">
+                <span class="a">
+                    <label for=""><em>"</em></label>
+                </span>
+                <div class=b>
+                    <h5>Finally free from old-school banks</h5>
+                    <blockquote>Debitis, nihil sit minus suscipit magni aperiam vel tenetur incidunt commodi architecto
+                        numquam omnis nulla autem, necessitatibus blanditiis modi similique quidem. Odio aliquam culpa
+                        dicta beatae quod maiores ipsa minus consequatur error sunt, deleniti saepe aliquid quos
+                        inventore sequi. Necessitatibus id alias reiciendis, perferendis facere.</blockquote>
+                </div>
+
+
+            </div>
+
+            <div class="right">→</div>
+
+        </div>
+        <div class="address">
+            <img src="./Bankist _ When Banking meets Minimalist_files/user-1.jpg" alt="">
+            <div>
+                <h3>Francisco Gomes</h3>
+                <p>Lisbon, Portugal</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="create_accout">
+
+        <h3>The best day to join Bankist was one year ago. The second best is
+            today!</h3>
+        <a class="model_click">Open
+            your free
+            account
+            today!</a>
+
+        <div class="page">
+            <form action="" class="Model">
+                <h2>Open your free account in just <span>5 minutes</span></h2>
+                <table>
+                    <tr>
+                        <th><label for="fname">First Name</label></th>
+                        <td> <input type="text" name="fname"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="lname">Last Name</label></th>
+                        <td><input type="text" name="lname"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">Email Address</label></th>
+                        <td> <input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> <button type="submit"><strong>Next Step →</strong></button></td>
+                    </tr>
+                </table>
+
+
+            </form>
+        </div>
+
+
+    </div>
+    <div class="footer">
+
+        <ul>
+            <li>About</li>
+            <li>Pricing</li>
+            <li>Terms of Use</li>
+            <li>Privacy Policy</li>
+            <li>Careers</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+        </ul>
+
+        <div class="img"> <img src="./Bankist _ When Banking meets Minimalist_files/icon.png" alt=""></div>
+
+        <p>© Copyright by <span>Sheeraz Akmal</span>. Use for learning or your portfolio. Alrights are reserved. Don't
+            claim as
+            your own product.</p>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
